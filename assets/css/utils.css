@@ -1,0 +1,38 @@
+.text-center {
+  text-align: center;
+}
+.title {
+  font-family: "Merienda-Bold";
+  font-size: var(--font-size-title);
+}
+.sub-title {
+  font-family: "Merienda-Bold";
+  font-size: var(--font-size-subtitle);
+}
+.small-title {
+  font-family: "Merienda-Bold";
+  font-size: var(--font-size-smalltitle);
+}
+.helper-text {
+  font-size: var(--font-size-small);
+}
+
+/* FLEX */
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+.flex-space-between{
+  justify-content: space-between;
+}
+.flex-space-evenly{
+  justify-content: space-evenly;
+}
+.flex-column{
+  flex-direction: column;
+}

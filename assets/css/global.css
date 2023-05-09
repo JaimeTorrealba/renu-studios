@@ -1,0 +1,81 @@
+@import "./utils.css";
+@import "./spaces.css";
+
+:root {
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 2rem;
+  --space-5: 4rem;
+  --primary-color: #25cede;
+  --white-color: #f7f7f7;
+  --gray-color: #eee;
+  --black-color: #333;
+  --dark-color: #111;
+  --text-color: #687891;
+  --shadow-layout: -5px -5px 15px rgba(255, 255, 255, 0.5),
+    5px 5px 15px rgba(136, 160, 183, 0.25);
+  --shadow-default: 3px 3px 15px var(--text-color),
+    3px 3px 10px var(--white-color);
+  --shadow-default-active: 1px 1px 15px var(--text-color),
+    1px 1px 10px var(--white-color);
+
+  --font-size-small: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
+  --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+  --font-size-smalltitle: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+  --font-size-subtitle: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+  --font-size-title: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+}
+
+@font-face {
+  font-family: "Merienda-Bold";
+  src: local("Merienda-Bold"), url(../font/Merienda-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Merienda-Light";
+  src: local("Merienda-Light"),
+    url(../font/Merienda-Light.ttf) format("truetype");
+}
+h1, h2, h3, h4, p{
+  margin-top: 0;
+  margin-bottom: var(--space-3);
+}
+html {
+  font-family: Merienda-Light;
+  background: linear-gradient(
+    45deg,
+    var(--white-color),
+    var(--black-color),
+    var(--dark-color)
+  );
+  min-width: 100vw;
+  min-height: 100vh;
+  background-size: 180% 180%;
+  animation: gradient-animation 12s ease infinite;
+  display: grid;
+  place-items: center;
+  color: var(--text-color);
+}
+body{
+  font-size: var(--font-size-base);
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.debug {
+  border: 1px solid red;
+}
+
+.router-link-active {
+  text-decoration: underline;
+}
