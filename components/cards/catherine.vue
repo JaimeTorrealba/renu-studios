@@ -6,7 +6,8 @@ const { isOutside } = useMouseInElement(cardCatherineRef);
 <template>
   <Cards
     name="Catherine Oughtibridge"
-    description="Content strategist/UX writer"
+    :title="$t('card_title')"
+    :description="$t('card_catherine_title')"
     ref="cardCatherineRef"
   >
     <template #avatar>

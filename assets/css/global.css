@@ -7,7 +7,7 @@
   --space-3: 1rem;
   --space-4: 2rem;
   --space-5: 4rem;
-  --primary-color: #25cede;
+  --primary-color: #3bccda;
   --white-color: #f7f7f7;
   --gray-color: #eee;
   --black-color: #333;
@@ -36,7 +36,11 @@
   src: local("Merienda-Light"),
     url(../font/Merienda-Light.ttf) format("truetype");
 }
-h1, h2, h3, h4, p{
+h1,
+h2,
+h3,
+h4,
+p {
   margin-top: 0;
   margin-bottom: var(--space-3);
 }
@@ -56,8 +60,29 @@ html {
   place-items: center;
   color: var(--text-color);
 }
-body{
+
+body {
+  --sb-thumb-color: var(--black-color);
+  --sb-track-color: var(--gray-color);
+  --sb-size: 10px;
   font-size: var(--font-size-base);
+  overflow-x: hidden;
+
+  scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 10px;
 }
 
 @keyframes gradient-animation {
@@ -70,6 +95,12 @@ body{
   100% {
     background-position: 0% 50%;
   }
+}
+
+ul, li{
+  list-style: none;
+  padding: 0 0 var(--space-2) ;
+  margin: 0;
 }
 
 .debug {

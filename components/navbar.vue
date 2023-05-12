@@ -16,7 +16,7 @@ const closeMenu = () => {
 <template>
   <header>
     <nav>
-      <NuxtLink to="/">
+      <NuxtLink to="/" class="flex">
         <icons
           view-box="0 0 24 24"
           width="24"

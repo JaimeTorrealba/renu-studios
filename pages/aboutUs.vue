@@ -22,12 +22,12 @@ onMounted(() => {
   <section class="flex flex-column container mt-4">
     <h1 class="sub-title" ref="titleRef">{{ $t("aboutTitle") }}</h1>
     <p ref="descriptionRef">
-      {{ $t("aboutDescription") }} Lorem ipsum dolor, sit amet consectetur
-      adipisicing elit. Ipsam hic reiciendis consequuntur molestias iste non
-      architecto et aliquam tempore. Magnam ipsum unde quaerat praesentium
-      corrupti debitis iusto dicta laborum nostrum!
+      {{ $t("aboutDescription") }}
     </p>
-    <div class="flex flex-space-evenly mt-4 pr-3 pl-3 card-space" ref="cardSpace">
+    <div
+      class="flex flex-space-evenly mt-4 pr-3 pl-3 card-space"
+      ref="cardSpace"
+    >
       <CardsCatherine />
       <CardsJaime />
       <CardsJose />
