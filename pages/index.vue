@@ -1,20 +1,14 @@
 <script setup>
-import gsap from "gsap";
-
 const titleRef = ref();
 const subtitleRef = ref();
 const descriptionRef = ref();
 const buttonRef = ref();
 
 onMounted(() => {
-  const tl = gsap.timeline({
-    defaults: { duration: 1, ease: "power2.out", opacity: 0, y: -50 },
-  });
-  tl.from(titleRef.value, {
-    delay: 0.5,
-  }).from(subtitleRef.value, {}, "1");
-  tl.from(descriptionRef.value, { y: 50 }, "0.75");
-  tl.from(buttonRef.value, { y: 50 }, "1");
+  useAppear(titleRef.value)
+    .from(subtitleRef.value, {}, "1")
+    .from(descriptionRef.value, { y: 50 }, "0.75")
+    .from(buttonRef.value, { y: 50 }, "1");
 });
 </script>
 <template>

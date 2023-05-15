@@ -3,10 +3,11 @@ export default defineI18nConfig(() => ({
   locale: "es",
   messages: {
     en: {
-      about: "About us",
-      contact: "Contact us",
+      about: "How we think?",
+      contact: "Let's talk",
       subtitle: "Creating unique experiences",
       description: "This is a description",
+      
       // about us
       aboutTitle: "Creative digital studio",
       aboutDescription: "I'm a description",
@@ -16,7 +17,6 @@ export default defineI18nConfig(() => ({
       card_jose_title: "Creative developer",
 
       // contact us
-      address: "We are located in:",
       form_title: "Contact form",
       form_name: "Name",
       form_name_placeholder: "Your name...",
@@ -26,20 +26,17 @@ export default defineI18nConfig(() => ({
       form_submit: "Send",
     },
     es: {
-      about: "¿Quiénes somos?",
+      about: "¿Como pensamos?",
       subtitle: "Creando experiencias únicas",
       description: "Esta es una descripción",
-      contact: "Contáctanos",
+      contact: "Hablemos",
+
       // about us
       aboutTitle: "Estudio digital creativo",
       aboutDescription: "Soy una descripción",
       card_title: "Co-fundador",
-      card_jaime_title: "Pricipal desarrollador creativo",
-      card_catherine_title: "UX writter/ directora de contenido",
-      card_jose_title: "Desarrollador creativo",
 
       // contact us
-      address: "Estamos ubicados en:",
       form_title: "Formulario de contacto",
       form_name: "Nombre",
       form_name_placeholder: "Tu nombre...",

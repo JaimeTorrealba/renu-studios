@@ -141,6 +141,7 @@ a {
   padding: var(--space-3) var(--space-2);
   border-radius: 8px;
   box-shadow: var(--shadow-layout);
+  z-index: 20;
   a {
     margin: var(--space-2) 0;
   }

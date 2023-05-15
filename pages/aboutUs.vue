@@ -1,21 +1,14 @@
 <script setup>
-import gsap from "gsap";
-
 const titleRef = ref();
 const descriptionRef = ref();
 const buttonRef = ref();
 const cardSpace = ref();
 
 onMounted(() => {
-  const tl = gsap.timeline({
-    defaults: { duration: 1, ease: "power2.out", opacity: 0, x: -50 },
-  });
-  tl.from(titleRef.value, {
-    delay: 0.5,
-  });
-  tl.from(descriptionRef.value, { x: 50 }, "0.75");
-  tl.from(buttonRef.value, { x: 0, y: 25 }, "1");
-  tl.from(cardSpace.value.children, { x: 0, y: 15, stagger: 0.3 }, "0.75");
+  useAppear(titleRef.value)
+    .from(descriptionRef.value, { y: 50 }, "0.75")
+    .from(buttonRef.value, { x: 0, y: 25 }, "1")
+    .from(cardSpace.value.children, { x: 0, y: 15, stagger: 0.3 }, "0.75");
 });
 </script>
 <template>

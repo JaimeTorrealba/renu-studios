@@ -9,10 +9,6 @@ const props = defineProps({
     type: String,
     required: true,
   },
-  description: {
-    type: String,
-    required: true,
-  },
 });
 </script>
 <template>
@@ -26,9 +22,6 @@ const props = defineProps({
     <h3 class="text-center">
       {{ name }}
     </h3>
-    <p class="helper-text text-center">
-      {{ description }}
-    </p>
     <div class="flex flex-center">
       <slot name="sign" />
     </div>

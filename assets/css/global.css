@@ -54,6 +54,7 @@ html {
   );
   min-width: 100vw;
   min-height: 100vh;
+  min-height: 100dvh;
   background-size: 180% 180%;
   animation: gradient-animation 12s ease infinite;
   display: grid;

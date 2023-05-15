@@ -1,10 +1,20 @@
 <script setup>
-const createCharacter = () => {
-  console.log("hola");
-};
+import gsap from "gsap";
+
+const formRef = ref();
+
+onMounted(() => {
+  gsap.from(formRef.value , {
+    duration: 1,
+    ease: "power2.out",
+    opacity: 0,
+    y: 10,
+    delay: 0.5,
+  })
+})
 </script>
 <template>
-  <div class="form-card flex">
+  <div class="form-card flex" ref="formRef">
     <FormKit type="form"
     netlify
     action="/"
@@ -32,6 +42,7 @@ const createCharacter = () => {
         type="email"
         name="email"
         id="email"
+        label="Email"
         :placeholder="$t('form_email_placeholder')"
         placeholder="renuStudios@gmail.com"
         validation="required|email"
